@@ -451,6 +451,58 @@ return 0; = end main() function
         printf("Cost per item: %.2f %c\n", cost_per_item, currency);
         printf("Total cost = %.2f %c\n", total_cost, currency);
 
+// ---------------
+// Type Conversion
+
+    // convert value of one data type to another
+    int x = 5;
+    int y = 2;
+    int sum = 5 / 2;
+
+    printf("%d", sum); // outputs 2
+    // 5 / 2 = 2.5
+    // is INT       =   2
+    // NOT float    =   2.5
+
+    // -------------------------
+    // Two types of conversions:
+        // implicit conversion is done by the compiler when assigning a
+        // value of one type to another
+
+        // automatic conversion: int -> float
+        float myFloat = 9;
+
+        printf("%f", myFloat); // 9.0000000
+
+        // INT( 9 ) => FLOAT( 9.00000000 )
+
+
+        // and vice-versa!
+        int myInt = 9.99;
+
+        printf("%d", myInt); // 9   <- Data loss is scary! ( .99 )
+
+
+        // -----------------------
+        // Importance of declaring
+            float sum = 5 / 2;
+
+            printf("%f", sum); // 2.0000000
+
+        //  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        //  Why does it print 2.0 and not 2.5?
+            // mathematics was calculated in INT
+
+
+        // -------------------
+        // explicit conversion
+            float sum = (float) 5 / 2;
+//                       ^^^^^
+
+            printf("%f", sum); // 2.5000000
+
+
+
 
 
 
